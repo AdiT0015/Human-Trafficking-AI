@@ -1,0 +1,20 @@
+# Human Trafficking AI Chatbot - Netlify Configuration
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/chatbot"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/landing.html"
+  status = 200

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Trafficking AI Chatbot</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Plotly.js for interactive visualizations -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Human Trafficking AI Chatbot Logo" class="logo">
+                <h1>Human Trafficking Information Assistant</h1>
+            </div>
+            <button id="info-button" class="info-button" aria-label="Information">
+                <i class="fas fa-info-circle"></i>
+            </button>
+        </header>
+
+        <main class="app-main">
+            <div class="chat-container">
+                <div id="chat-messages" class="chat-messages">
+                    <!-- Welcome message will be inserted here by JavaScript -->
+                </div>
+                
+                <div class="suggestion-chips" id="suggestion-chips">
+                    <!-- Suggestion chips will be inserted here by JavaScript -->
+                </div>
+                
+                <div class="chat-input-container">
+                    <textarea id="user-input" class="chat-input" placeholder="Type your question here..." rows="1"></textarea>
+                    <button id="send-button" class="send-button" aria-label="Send message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                
+                <div class="safety-notice">
+                    <p>If you or someone you know is in immediate danger, please call emergency services (911 in the US).</p>
+                    <p>National Human Trafficking Hotline: <a href="tel:1-888-373-7888">1-888-373-7888</a> or text "BEFREE" to 233733</p>
+                </div>
+            </div>
+            
+            <div id="visualization-panel" class="visualization-panel">
+                <div class="panel-header">
+                    <h2>Data Visualization</h2>
+                    <button id="close-viz-panel" class="close-button" aria-label="Close visualization panel">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="visualization-content" class="visualization-content">
+                    <!-- Visualizations will be inserted here by JavaScript -->
+                    <p class="viz-placeholder">Ask a question about human trafficking statistics to see visualizations.</p>
+                </div>
+            </div>
+        </main>
+
+        <div id="info-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>About This Chatbot</h2>
+                    <button id="close-modal" class="close-button" aria-label="Close modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>This AI chatbot provides information about human trafficking, including definitions, statistics, warning signs, and resources for help.</p>
+                    <p>The information is sourced from authoritative organizations such as:</p>
+                    <ul>
+                        <li>United Nations Office on Drugs and Crime (UNODC)</li>
+                        <li>International Labour Organization (ILO)</li>
+                        <li>Polaris Project</li>
+                        <li>Department of Homeland Security (DHS) Blue Campaign</li>
+                    </ul>
+                    <p>This chatbot is designed to provide educational information only and is not a substitute for professional advice or emergency services.</p>
+                    <h3>Privacy Notice</h3>
+                    <p>This chatbot does not store personal information. Conversations are not retained after the session ends.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="utils/helpers.js"></script>
+    <script src="components/chat.js"></script>
+    <script src="components/visualization.js"></script>
+    <script src="components/suggestions.js"></script>
+    <script src="components/safety.js"></script>
+    <script src="utils/api.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
